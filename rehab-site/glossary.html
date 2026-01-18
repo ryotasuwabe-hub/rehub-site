@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="リハビリでよく使われる専門用語をわかりやすく解説。PT、OT、ADL、MMTなど。">
+    <title>用語集 | リハビリガイド</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .glossary-section {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .glossary-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 0.75rem;
+        }
+
+        .glossary-section h2 .icon {
+            font-size: 1.75rem;
+        }
+
+        .term-card {
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .term-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .term-card h3 .abbr {
+            background: var(--color-primary);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .term-card h3 .full-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        .term-card p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .term-card .example {
+            background: #ECFDF5;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .term-card .example strong {
+            color: #059669;
+        }
+
+        .search-box {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: 2px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .alphabet-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .alphabet-nav a {
+            background: #E0F2FE;
+            color: var(--color-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .alphabet-nav a:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏃‍♂️</span>
+                <span>リハビリガイド</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="exercises.html">自主トレ</a></li>
+                <li><a href="research.html">論文解説</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
+                <li><a href="family-guide.html">家族向けガイド</a></li>
+                <li><a href="glossary.html" class="active">用語集</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);">
+        <div class="container">
+            <h1>📖 リハビリ用語集</h1>
+            <p>専門用語をわかりやすく解説します</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- 検索ボックス -->
+            <div class="search-box">
+                <span style="font-size: 1.25rem;">🔍</span>
+                <input type="text" id="searchInput" placeholder="用語を検索..." onkeyup="filterTerms()">
+            </div>
+
+            <!-- カテゴリナビ -->
+            <div class="alphabet-nav">
+                <a href="#staff">専門職</a>
+                <a href="#adl">生活・動作</a>
+                <a href="#evaluation">評価・検査</a>
+                <a href="#treatment">治療・訓練</a>
+                <a href="#condition">症状・状態</a>
+            </div>
+
+            <!-- 専門職 -->
+            <div class="glossary-section" id="staff">
+                <h2><span class="icon">👨‍⚕️</span>専門職</h2>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">PT</span>
+                        理学療法士
+                        <span class="full-name">Physical Therapist</span>
+                    </h3>
+                    <p>身体の基本的な動作能力（起き上がる、立つ、歩くなど）の回復を支援する専門職です。筋力トレーニング、バランス訓練、歩行訓練などを行います。</p>
+                    <div class="example">
+                        <strong>💡 例：</strong>「PTさんと一緒に歩く練習をしましょう」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">OT</span>
+                        作業療法士
+                        <span class="full-name">Occupational Therapist</span>
+                    </h3>
+                    <p>日常生活動作（食事、着替え、入浴など）や家事、仕事などの作業能力の回復を支援する専門職です。手の動きや認知機能の訓練も行います。</p>
+                    <div class="example">
+                        <strong>💡 例：</strong>「OTさんと着替えの練習をしました」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">ST</span>
+                        言語聴覚士
+                        <span class="full-name">Speech-Language-Hearing Therapist</span>
+                    </h3>
+                    <p>話す・聞く・食べる（飲み込む）機能の回復を支援する専門職です。失語症、構音障害、嚥下障害などに対応します。</p>
+                    <div class="example">
+                        <strong>💡 例：</strong>「STさんと飲み込みの練習をしています」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">MSW</span>
+                        医療ソーシャルワーカー
+                        <span class="full-name">Medical Social Worker</span>
+                    </h3>
+                    <p>退院後の生活や社会復帰、介護保険の申請、経済的な問題などの相談に対応する専門職です。</p>
+                </div>
+            </div>
+
+            <!-- 生活・動作 -->
+            <div class="glossary-section" id="adl">
+                <h2><span class="icon">🏠</span>生活・動作</h2>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">ADL</span>
+                        日常生活動作
+                        <span class="full-name">Activities of Daily Living</span>
+                    </h3>
+                    <p>日常生活で必要な基本的な動作のこと。食事、排泄、着替え、入浴、移動などが含まれます。リハビリの主な目標の一つです。</p>
+                    <div class="example">
+                        <strong>💡 例：</strong>「ADLが自立している」＝日常の動作が自分でできる状態
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">IADL</span>
+                        手段的日常生活動作
+                        <span class="full-name">Instrumental ADL</span>
+                    </h3>
+                    <p>ADLよりも複雑な生活動作。買い物、料理、掃除、洗濯、金銭管理、電話の使用、服薬管理などが含まれます。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">QOL</span>
+                        生活の質
+                        <span class="full-name">Quality of Life</span>
+                    </h3>
+                    <p>身体的な健康だけでなく、精神的な満足感、社会的なつながり、生きがいなどを含めた「生活全体の質」を指します。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">FIM</span>
+                        機能的自立度評価
+                        <span class="full-name">Functional Independence Measure</span>
+                    </h3>
+                    <p>ADLの自立度を18項目で評価する世界共通の指標。各項目1〜7点で評価し、合計126点満点。点数が高いほど自立度が高い。</p>
+                </div>
+            </div>
+
+            <!-- 評価・検査 -->
+            <div class="glossary-section" id="evaluation">
+                <h2><span class="icon">📊</span>評価・検査</h2>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">ROM</span>
+                        関節可動域
+                        <span class="full-name">Range of Motion</span>
+                    </h3>
+                    <p>関節が動く範囲のこと。リハビリでは関節が硬くならないよう、ROMを維持・改善する訓練を行います。</p>
+                    <div class="example">
+                        <strong>💡 例：</strong>「ROM訓練をしましょう」＝関節を動かす訓練
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">MMT</span>
+                        徒手筋力テスト
+                        <span class="full-name">Manual Muscle Test</span>
+                    </h3>
+                    <p>筋力を0〜5の6段階で評価する検査。0は全く動かない、5は正常な筋力を意味します。</p>
+                    <div class="example">
+                        <strong>💡 例：</strong>「右腕のMMTが4になりました」＝かなり筋力が回復した
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">BBS</span>
+                        バーグバランススケール
+                        <span class="full-name">Berg Balance Scale</span>
+                    </h3>
+                    <p>バランス能力を14項目で評価する検査。各項目0〜4点、合計56点満点。転倒リスクの予測にも使われます。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">6MWT</span>
+                        6分間歩行テスト
+                        <span class="full-name">6-Minute Walk Test</span>
+                    </h3>
+                    <p>6分間でどれだけの距離を歩けるかを測定する検査。持久力や全身の運動能力を評価します。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">TUG</span>
+                        タイムドアップアンドゴー
+                        <span class="full-name">Timed Up and Go Test</span>
+                    </h3>
+                    <p>椅子から立ち上がり、3m歩いて戻り、再び座るまでの時間を測定。バランスと移動能力の評価に用います。</p>
+                </div>
+            </div>
+
+            <!-- 治療・訓練 -->
+            <div class="glossary-section" id="treatment">
+                <h2><span class="icon">💪</span>治療・訓練</h2>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        早期離床
+                    </h3>
+                    <p>病気やケガの後、できるだけ早く（24〜48時間以内に）ベッドから離れて座ったり立ったりすること。廃用症候群の予防に重要。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        廃用症候群
+                    </h3>
+                    <p>長期間安静にしていることで起こる筋力低下、関節の硬直、骨粗鬆症などの二次的な障害。「寝たきり」による機能低下を指します。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        自主トレーニング
+                    </h3>
+                    <p>セラピストの指導のもと、患者さん自身が自宅などで行う運動のこと。リハビリ効果を維持・向上させるために重要です。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        アドヒアランス
+                    </h3>
+                    <p>患者さん自身が積極的に治療方針を理解し、自ら進んで治療を続けること。「継続率」とも言われます。</p>
+                </div>
+            </div>
+
+            <!-- 症状・状態 -->
+            <div class="glossary-section" id="condition">
+                <h2><span class="icon">🏥</span>症状・状態</h2>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        片麻痺（かたまひ）
+                    </h3>
+                    <p>脳卒中などにより、体の左右どちらか半分が麻痺すること。右脳の障害で左半身、左脳の障害で右半身の麻痺が起こることが多い。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        失語症
+                    </h3>
+                    <p>脳の言語中枢の障害により、話す・聞く・読む・書くことが困難になる状態。知能の問題ではありません。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        嚥下障害（えんげしょうがい）
+                    </h3>
+                    <p>食べ物や飲み物を飲み込むことが困難になる状態。むせやすい、喉に残る感じがするなどの症状があります。</p>
+                </div>
+
+                <div class="term-card">
+                    <h3>
+                        <span class="abbr">—</span>
+                        高次脳機能障害
+                    </h3>
+                    <p>脳の損傷により、記憶、注意、判断、計画などの認知機能に障害が起こること。外見からはわかりにくい「見えない障害」とも言われます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 リハビリガイド All Rights Reserved.</p>
+                <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">
+                    ※ このサイトの情報は教育目的であり、医療アドバイスではありません。
+                    リハビリを始める前に必ず医師にご相談ください。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterTerms() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+            const termCards = document.querySelectorAll('.term-card');
+
+            termCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchValue)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

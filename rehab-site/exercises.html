@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="自主トレーニングガイド。部位別・目的別にわかりやすく解説。">
+    <title>自主トレ | リハビリガイド</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .exercise-animation {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exercise-animation svg {
+            width: 160px;
+            height: 200px;
+        }
+
+        .exercise-animation svg * {
+            stroke: white;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .exercise-animation svg circle.joint {
+            fill: white;
+            stroke: none;
+            r: 4;
+        }
+
+        /* ===== 1. KNEE EXERCISE - Proper seated position ===== */
+        .knee-exercise .lower-leg {
+            transform-origin: 105px 115px;
+            animation: kneeSwing 2s ease-in-out infinite;
+        }
+
+        @keyframes kneeSwing {
+
+            0%,
+            100% {
+                transform: rotate(60deg);
+            }
+
+            50% {
+                transform: rotate(-20deg);
+            }
+        }
+
+        /* ===== 2. SQUAT - スクワット ===== */
+        .squat-exercise .squatting-body {
+            animation: squatDown 2s ease-in-out infinite;
+        }
+
+        @keyframes squatDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(35px);
+            }
+        }
+
+        .squat-exercise .squatting-legs {
+            animation: kneeBend 2s ease-in-out infinite;
+        }
+
+        @keyframes kneeBend {
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(0.6);
+            }
+        }
+
+        /* ===== 3. SHOULDER ROTATION - Both arms making circles ===== */
+        .shoulder-rotation .left-rotating-arm {
+            transform-origin: 55px 55px;
+            animation: armCircleL 2.5s linear infinite;
+        }
+
+        .shoulder-rotation .right-rotating-arm {
+            transform-origin: 105px 55px;
+            animation: armCircleR 2.5s linear infinite;
+        }
+
+        @keyframes armCircleL {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes armCircleR {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        /* ===== 4. GRIP - Open/close hand (グーパー) ===== */
+        .grip-training .fingers-group {
+            transform-origin: 80px 110px;
+            animation: handOpen 1s ease-in-out infinite;
+        }
+
+        @keyframes handOpen {
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(0.3);
+            }
+        }
+
+        /* ===== 5. BREATHING ===== */
+        .breathing .chest {
+            transform-origin: 80px 75px;
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+            }
+        }
+
+        /* ===== 6. BRIDGE - Connected body, pelvis lifts ===== */
+        .bridge-exercise .bridge-body {
+            transform-origin: 45px 145px;
+            animation: bridgeLiftPelvis 2s ease-in-out infinite;
+        }
+
+        @keyframes bridgeLiftPelvis {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-20deg);
+            }
+        }
+
+        /* ===== 7. SINGLE LEG STAND ===== */
+        .single-leg .lifted-leg {
+            transform-origin: 90px 100px;
+            animation: legLift 2.5s ease-in-out infinite;
+        }
+
+        .single-leg .balance-arms {
+            transform-origin: 80px 60px;
+            animation: armBalance 2.5s ease-in-out infinite;
+        }
+
+        @keyframes legLift {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-45deg);
+            }
+        }
+
+        @keyframes armBalance {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(8deg);
+            }
+        }
+
+        /* ===== 8. TANDEM WALK - Feet overtaking each other ===== */
+        .tandem-walk .foot-left {
+            animation: overtakeL 2s ease-in-out infinite;
+        }
+
+        .tandem-walk .foot-right {
+            animation: overtakeR 2s ease-in-out infinite;
+        }
+
+        @keyframes overtakeL {
+            0% {
+                transform: translateY(60px);
+            }
+
+            50% {
+                transform: translateY(-60px);
+            }
+
+            100% {
+                transform: translateY(60px);
+            }
+        }
+
+        @keyframes overtakeR {
+            0% {
+                transform: translateY(-60px);
+            }
+
+            50% {
+                transform: translateY(60px);
+            }
+
+            100% {
+                transform: translateY(-60px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏃‍♂️</span>
+                <span>リハビリガイド</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="exercises.html" class="active">自主トレ</a></li>
+                <li><a href="research.html">論文解説</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
+                <li><a href="family-guide.html">家族向けガイド</a></li>
+                <li><a href="glossary.html">用語集</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>🏋️ 自主トレーニング</h1>
+            <p>部位別・目的別のトレーニングメニューをご紹介</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="lower">下肢</button>
+                <button class="filter-btn" data-filter="upper">上肢</button>
+                <button class="filter-btn" data-filter="core">体幹</button>
+                <button class="filter-btn" data-filter="balance">バランス</button>
+            </div>
+
+            <div class="cards-grid">
+                <!-- 1. Knee Exercise - Seated properly on chair -->
+                <div class="card exercise-card fade-in" data-category="lower">
+                    <div class="exercise-animation knee-exercise">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Chair -->
+                            <rect x="30" y="100" width="50" height="10" rx="2"
+                                style="fill:rgba(255,255,255,0.4);stroke:none;" />
+                            <line x1="35" y1="110" x2="35" y2="150" style="stroke:rgba(255,255,255,0.4);" />
+                            <line x1="75" y1="110" x2="75" y2="150" style="stroke:rgba(255,255,255,0.4);" />
+                            <rect x="75" y="60" width="8" height="50" rx="2"
+                                style="fill:rgba(255,255,255,0.4);stroke:none;" />
+
+                            <!-- Person sitting - Head -->
+                            <circle cx="60" cy="40" r="12" />
+                            <!-- Neck -->
+                            <line x1="60" y1="52" x2="60" y2="60" />
+                            <!-- Shoulders -->
+                            <line x1="45" y1="65" x2="75" y2="65" />
+                            <!-- Torso (upright) -->
+                            <line x1="60" y1="65" x2="60" y2="100" />
+                            <!-- Hips on chair -->
+                            <line x1="50" y1="100" x2="70" y2="100" />
+
+                            <!-- Arms resting -->
+                            <polyline points="45,65 35,85 40,100" />
+                            <polyline points="75,65 85,85 80,100" />
+
+                            <!-- Left leg (stationary, bent at knee) -->
+                            <line x1="50" y1="100" x2="50" y2="115" />
+                            <circle class="joint" cx="50" cy="115" />
+                            <line x1="50" y1="115" x2="50" y2="150" />
+
+                            <!-- Right leg - thigh horizontal on chair -->
+                            <line x1="70" y1="100" x2="105" y2="115" />
+                            <circle class="joint" cx="105" cy="115" />
+                            <!-- Lower leg (animates - kicks out and back) -->
+                            <g class="lower-leg">
+                                <line x1="105" y1="115" x2="105" y2="150" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">下肢</span>
+                        <span class="exercise-tag difficulty-easy">初級</span>
+                    </div>
+                    <h3>膝の曲げ伸ばし運動</h3>
+                    <p>椅子に座って膝を曲げ伸ばし。膝関節の可動域改善と大腿四頭筋の強化に。</p>
+                    <p><strong>回数：</strong>10回 × 3セット</p>
+                </div>
+
+                <!-- 2. Squat - スクワット -->
+                <div class="card exercise-card fade-in" data-category="lower">
+                    <div class="exercise-animation squat-exercise">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Floor -->
+                            <line x1="30" y1="180" x2="130" y2="180"
+                                style="stroke:rgba(255,255,255,0.5);stroke-width:3;" />
+
+                            <!-- Upper body that descends -->
+                            <g class="squatting-body">
+                                <!-- Head -->
+                                <circle cx="80" cy="25" r="12" />
+                                <!-- Neck -->
+                                <line x1="80" y1="37" x2="80" y2="45" />
+                                <!-- Shoulders -->
+                                <line x1="55" y1="50" x2="105" y2="50" />
+                                <!-- Torso -->
+                                <line x1="80" y1="50" x2="80" y2="100" />
+                                <!-- Hips -->
+                                <circle class="joint" cx="80" cy="100" />
+                                <!-- Arms forward for balance -->
+                                <polyline points="55,50 40,65 35,65" />
+                                <polyline points="105,50 120,65 125,65" />
+                            </g>
+
+                            <!-- Legs that compress -->
+                            <g class="squatting-legs" style="transform-origin: 80px 180px;">
+                                <!-- Left Leg -->
+                                <line x1="70" y1="100" x2="60" y2="140" />
+                                <circle class="joint" cx="60" cy="140" />
+                                <line x1="60" y1="140" x2="65" y2="175" />
+                                <line x1="55" y1="175" x2="75" y2="175" />
+
+                                <!-- Right Leg -->
+                                <line x1="90" y1="100" x2="100" y2="140" />
+                                <circle class="joint" cx="100" cy="140" />
+                                <line x1="100" y1="140" x2="95" y2="175" />
+                                <line x1="85" y1="175" x2="105" y2="175" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">下肢</span>
+                        <span class="exercise-tag difficulty-medium">中級</span>
+                    </div>
+                    <h3>スクワット</h3>
+                    <p>膝を曲げて腰を落とす運動。下肢全体の筋力強化に効果的。</p>
+                    <p><strong>回数：</strong>10回 × 3セット</p>
+                </div>
+
+                <!-- 3. Shoulder Rotation - Arms making full circles -->
+                <div class="card exercise-card fade-in" data-category="upper">
+                    <div class="exercise-animation shoulder-rotation">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Head -->
+                            <circle cx="80" cy="30" r="12" />
+                            <!-- Neck -->
+                            <line x1="80" y1="42" x2="80" y2="50" />
+                            <!-- Shoulders -->
+                            <line x1="55" y1="55" x2="105" y2="55" />
+                            <!-- Torso -->
+                            <line x1="80" y1="55" x2="80" y2="110" />
+                            <!-- Hips -->
+                            <line x1="70" y1="110" x2="90" y2="110" />
+                            <!-- Legs -->
+                            <line x1="73" y1="110" x2="73" y2="150" />
+                            <circle class="joint" cx="73" cy="150" />
+                            <line x1="73" y1="150" x2="73" y2="180" />
+                            <line x1="87" y1="110" x2="87" y2="150" />
+                            <circle class="joint" cx="87" cy="150" />
+                            <line x1="87" y1="150" x2="87" y2="180" />
+
+                            <!-- Left rotating arm -->
+                            <g class="left-rotating-arm">
+                                <line x1="55" y1="55" x2="55" y2="15" />
+                                <circle class="joint" cx="55" cy="35" />
+                                <circle cx="55" cy="10" r="4" style="fill:white;stroke:none;" />
+                            </g>
+
+                            <!-- Right rotating arm -->
+                            <g class="right-rotating-arm">
+                                <line x1="105" y1="55" x2="105" y2="15" />
+                                <circle class="joint" cx="105" cy="35" />
+                                <circle cx="105" cy="10" r="4" style="fill:white;stroke:none;" />
+                            </g>
+
+                            <!-- Circle path indicators -->
+                            <circle cx="55" cy="55" r="40"
+                                style="stroke:rgba(255,255,255,0.2);stroke-dasharray:5,5;fill:none;" />
+                            <circle cx="105" cy="55" r="40"
+                                style="stroke:rgba(255,255,255,0.2);stroke-dasharray:5,5;fill:none;" />
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">上肢</span>
+                        <span class="exercise-tag difficulty-medium">中級</span>
+                    </div>
+                    <h3>肩の円運動</h3>
+                    <p>肩をゆっくり回す運動。四十肩・五十肩の予防と改善に効果的です。</p>
+                    <p><strong>回数：</strong>前後10回ずつ × 2セット</p>
+                </div>
+
+                <!-- 4. Grip Training - Simple open/close グーパー -->
+                <div class="card exercise-card fade-in" data-category="upper">
+                    <div class="exercise-animation grip-training">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Wrist/Forearm -->
+                            <line x1="80" y1="180" x2="80" y2="130" />
+                            <!-- Palm -->
+                            <rect x="60" y="100" width="40" height="30" rx="6" />
+                            <!-- Fingers (animate open/close) -->
+                            <g class="fingers-group">
+                                <line x1="65" y1="100" x2="65" y2="60" />
+                                <line x1="75" y1="100" x2="75" y2="55" />
+                                <line x1="85" y1="100" x2="85" y2="55" />
+                                <line x1="95" y1="100" x2="95" y2="60" />
+                            </g>
+                            <!-- Thumb (separate) -->
+                            <polyline points="60,115 45,110 40,95" />
+
+                            <!-- Labels -->
+                            <text x="30" y="50" style="fill:white;font-size:14px;stroke:none;">パー</text>
+                            <text x="110" y="130" style="fill:white;font-size:14px;stroke:none;">グー</text>
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">上肢</span>
+                        <span class="exercise-tag difficulty-easy">初級</span>
+                    </div>
+                    <h3>握力トレーニング</h3>
+                    <p>手をグーパーする運動。握力維持・改善に効果的。手のリハビリにも。</p>
+                    <p><strong>回数：</strong>20回 × 3セット</p>
+                </div>
+
+                <!-- 5. Breathing (User says this is good - keep as is) -->
+                <div class="card exercise-card fade-in" data-category="core">
+                    <div class="exercise-animation breathing">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Head -->
+                            <circle cx="80" cy="25" r="12" />
+                            <!-- Neck -->
+                            <line x1="80" y1="37" x2="80" y2="45" />
+                            <!-- Shoulders -->
+                            <line x1="55" y1="50" x2="105" y2="50" />
+                            <!-- Chest (animates breathing) -->
+                            <ellipse class="chest" cx="80" cy="75" rx="20" ry="18" />
+                            <!-- Torso -->
+                            <line x1="80" y1="50" x2="80" y2="105" />
+                            <!-- Hips -->
+                            <line x1="70" y1="105" x2="90" y2="105" />
+                            <!-- Arms relaxed -->
+                            <polyline points="55,50 45,75 50,100" />
+                            <polyline points="105,50 115,75 110,100" />
+                            <!-- Legs -->
+                            <line x1="73" y1="105" x2="73" y2="145" />
+                            <circle class="joint" cx="73" cy="145" />
+                            <line x1="73" y1="145" x2="73" y2="180" />
+                            <line x1="87" y1="105" x2="87" y2="145" />
+                            <circle class="joint" cx="87" cy="145" />
+                            <line x1="87" y1="145" x2="87" y2="180" />
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">体幹</span>
+                        <span class="exercise-tag difficulty-easy">初級</span>
+                    </div>
+                    <h3>腹式呼吸</h3>
+                    <p>お腹を使った深呼吸。体幹の深層筋を活性化させリラックス効果も。</p>
+                    <p><strong>回数：</strong>10回 × 2セット</p>
+                </div>
+
+                <!-- 6. Bridge - Connected body, pelvis lifts -->
+                <div class="card exercise-card fade-in" data-category="core">
+                    <div class="exercise-animation bridge-exercise">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Floor -->
+                            <line x1="10" y1="155" x2="150" y2="155"
+                                style="stroke:rgba(255,255,255,0.5);stroke-width:4;" />
+
+                            <!-- Head on floor (static) -->
+                            <circle cx="20" cy="145" r="8" />
+
+                            <!-- Upper back/shoulders on floor (static) -->
+                            <line x1="28" y1="145" x2="45" y2="145" />
+
+                            <!-- Connected body that lifts (pivots from shoulders) -->
+                            <g class="bridge-body">
+                                <!-- Torso/belly (connected to shoulders) -->
+                                <line x1="45" y1="145" x2="75" y2="145" />
+                                <!-- Pelvis -->
+                                <ellipse cx="75" cy="145" rx="8" ry="5" style="fill:rgba(255,255,255,0.3);" />
+                                <circle class="joint" cx="75" cy="145" />
+
+                                <!-- Left thigh -->
+                                <line x1="75" y1="145" x2="100" y2="150" />
+                                <!-- Left knee -->
+                                <circle class="joint" cx="100" cy="150" />
+                                <!-- Left shin -->
+                                <line x1="100" y1="150" x2="95" y2="153" />
+                                <!-- Left ankle -->
+                                <circle class="joint" cx="95" cy="153" />
+
+                                <!-- Right thigh -->
+                                <line x1="75" y1="145" x2="120" y2="150" />
+                                <!-- Right knee -->
+                                <circle class="joint" cx="120" cy="150" />
+                                <!-- Right shin -->
+                                <line x1="120" y1="150" x2="115" y2="153" />
+                                <!-- Right ankle -->
+                                <circle class="joint" cx="115" cy="153" />
+                            </g>
+
+                            <!-- Feet on floor (static anchor points) -->
+                            <line x1="90" y1="153" x2="100" y2="153" />
+                            <line x1="110" y1="153" x2="120" y2="153" />
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">体幹</span>
+                        <span class="exercise-tag difficulty-hard">上級</span>
+                    </div>
+                    <h3>ブリッジ運動</h3>
+                    <p>仰向けでお尻を持ち上げる運動。体幹・お尻の筋力強化、腰痛改善に。</p>
+                    <p><strong>回数：</strong>10回 × 3セット</p>
+                </div>
+
+                <!-- 7. Single Leg Stand (User says this is good - keep as is) -->
+                <div class="card exercise-card fade-in" data-category="balance">
+                    <div class="exercise-animation single-leg">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Head -->
+                            <circle cx="80" cy="25" r="12" />
+                            <!-- Neck -->
+                            <line x1="80" y1="37" x2="80" y2="45" />
+                            <!-- Shoulders -->
+                            <line x1="55" y1="50" x2="105" y2="50" />
+                            <!-- Torso -->
+                            <line x1="80" y1="50" x2="80" y2="105" />
+                            <!-- Hips -->
+                            <line x1="70" y1="105" x2="90" y2="105" />
+
+                            <!-- Arms for balance -->
+                            <g class="balance-arms">
+                                <polyline points="55,50 35,70 25,90" />
+                                <circle class="joint" cx="35" cy="70" />
+                                <polyline points="105,50 125,70 135,90" />
+                                <circle class="joint" cx="125" cy="70" />
+                            </g>
+
+                            <!-- Standing leg (left) -->
+                            <line x1="73" y1="105" x2="73" y2="145" />
+                            <circle class="joint" cx="73" cy="145" />
+                            <line x1="73" y1="145" x2="73" y2="180" />
+
+                            <!-- Lifted leg (right) - animates -->
+                            <g class="lifted-leg">
+                                <line x1="90" y1="105" x2="110" y2="130" />
+                                <circle class="joint" cx="110" cy="130" />
+                                <line x1="110" y1="130" x2="120" y2="155" />
+                            </g>
+
+                            <!-- Floor under standing foot -->
+                            <line x1="65" y1="180" x2="85" y2="180" style="stroke:rgba(255,255,255,0.4);" />
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">バランス</span>
+                        <span class="exercise-tag difficulty-medium">中級</span>
+                    </div>
+                    <h3>片足立ち</h3>
+                    <p>片足で立つバランス訓練。転倒予防と下肢筋力・バランス能力向上に。</p>
+                    <p><strong>回数：</strong>左右各30秒 × 3セット</p>
+                </div>
+
+                <!-- 8. Tandem Walk - Feet overtaking each other -->
+                <div class="card exercise-card fade-in" data-category="balance">
+                    <div class="exercise-animation tandem-walk">
+                        <svg viewBox="0 0 160 200">
+                            <!-- Vertical walking line -->
+                            <line x1="80" y1="20" x2="80" y2="180"
+                                style="stroke:rgba(255,255,255,0.4);stroke-width:3;" />
+
+                            <!-- Direction arrow (upward) -->
+                            <polyline points="70,30 80,15 90,30" style="stroke:white;stroke-width:2;fill:none;" />
+
+                            <!-- Left foot (overtakes) -->
+                            <g class="foot-left">
+                                <ellipse cx="75" cy="100" rx="15" ry="28" style="fill:white;stroke:none;" />
+                                <ellipse cx="75" cy="75" rx="11" ry="9"
+                                    style="fill:rgba(255,255,255,0.7);stroke:none;" />
+                                <text x="18" y="105" style="fill:white;font-size:10px;stroke:none;">左</text>
+                            </g>
+
+                            <!-- Right foot (overtakes) -->
+                            <g class="foot-right">
+                                <ellipse cx="85" cy="100" rx="15" ry="28"
+                                    style="fill:rgba(255,255,255,0.7);stroke:none;" />
+                                <ellipse cx="85" cy="75" rx="11" ry="9"
+                                    style="fill:rgba(255,255,255,0.5);stroke:none;" />
+                                <text x="125" y="105" style="fill:white;font-size:10px;stroke:none;">右</text>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="exercise-meta">
+                        <span class="exercise-tag">バランス</span>
+                        <span class="exercise-tag difficulty-easy">初級</span>
+                    </div>
+                    <h3>タンデム歩行</h3>
+                    <p>かかととつま先をつけて一直線に歩く訓練。歩行安定性を高めます。</p>
+                    <p><strong>回数：</strong>10歩 × 3セット</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 リハビリガイド All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
