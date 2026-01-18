@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="転倒予防の環境整備から日常動作の工夫まで、リハビリ患者さんの日常生活を安全・快適にするヒント。">
+    <title>日常生活のヒント | リハビリガイド</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tips-section {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .tips-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .tips-section h2 .icon {
+            font-size: 2rem;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .room-card {
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .room-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .room-card h3 .icon {
+            font-size: 1.5rem;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+        }
+
+        .evidence-box {
+            background: #F0FDF4;
+            border-left: 4px solid #22C55E;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .evidence-box strong {
+            color: #166534;
+        }
+
+        .adl-tip {
+            background: #FEFCE8;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .adl-tip h4 {
+            color: #A16207;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .product-card {
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .product-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .product-card p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .warning-card {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏃‍♂️</span>
+                <span>リハビリガイド</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="exercises.html">自主トレ</a></li>
+                <li><a href="research.html">論文解説</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
+                <li><a href="family-guide.html">家族向けガイド</a></li>
+                <li><a href="glossary.html">用語集</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
+        <div class="container">
+            <h1>🏠 日常生活のヒント</h1>
+            <p>安全で快適な毎日を過ごすための実践的なアドバイス</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- 転倒予防の環境整備 -->
+            <div class="tips-section">
+                <h2><span class="icon">🛡️</span>転倒予防の環境整備</h2>
+                <p>住宅環境の改善は、転倒リスクを大幅に減らすことができます。以下のチェックリストを参考に、お部屋の安全性を確認しましょう。</p>
+
+                <div class="evidence-box">
+                    <strong>📚
+                        エビデンス：</strong>Cochrane系統的レビューにより、住宅環境の改善（手すり設置、段差解消など）が転倒率を<strong>26%減少</strong>させることが示されています。転倒リスクが高い方では<strong>38%減少</strong>。
+                </div>
+
+                <h3 style="margin-top: 1.5rem;">お部屋別チェックリスト</h3>
+                <div class="room-grid">
+                    <div class="room-card">
+                        <h3><span class="icon">🚿</span>浴室・トイレ</h3>
+                        <ul class="checklist">
+                            <li>浴槽の出入り口に手すりを設置</li>
+                            <li>トイレの便座横に手すりを設置</li>
+                            <li>滑り止めマットを敷く</li>
+                            <li>シャワーチェアを使用</li>
+                            <li>床を濡れたままにしない</li>
+                            <li>十分な明るさを確保</li>
+                        </ul>
+                    </div>
+
+                    <div class="room-card">
+                        <h3><span class="icon">🛋️</span>リビング・廊下</h3>
+                        <ul class="checklist">
+                            <li>電気コードを壁沿いに固定</li>
+                            <li>滑りやすいマットを除去または固定</li>
+                            <li>家具の角にクッション材</li>
+                            <li>通路に物を置かない</li>
+                            <li>夜間用の足元灯を設置</li>
+                            <li>長い廊下には手すりを設置</li>
+                        </ul>
+                    </div>
+
+                    <div class="room-card">
+                        <h3><span class="icon">🛏️</span>寝室</h3>
+                        <ul class="checklist">
+                            <li>ベッドの高さを調整（膝の高さ程度）</li>
+                            <li>ベッドサイドに手すりまたは安定した家具</li>
+                            <li>枕元にライトを設置</li>
+                            <li>よく使うものを手の届く場所に</li>
+                            <li>スリッパは滑りにくいものを</li>
+                        </ul>
+                    </div>
+
+                    <div class="room-card">
+                        <h3><span class="icon">🚪</span>玄関・階段</h3>
+                        <ul class="checklist">
+                            <li>段差を目立たせる（色テープなど）</li>
+                            <li>階段の両側に手すりを設置</li>
+                            <li>玄関に椅子やベンチを設置</li>
+                            <li>靴の脱ぎ履きしやすい場所を確保</li>
+                            <li>照明を明るくする</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 日常動作の工夫 -->
+            <div class="tips-section">
+                <h2><span class="icon">💪</span>日常動作の工夫（ADL）</h2>
+                <p>少しの工夫で、日常の動作がより安全に、より楽にできるようになります。</p>
+
+                <div class="adl-tip">
+                    <h4>👕 着替え</h4>
+                    <ul>
+                        <li><strong>座って行う：</strong>ベッドや椅子に座って着替えると安定します</li>
+                        <li><strong>麻痺側から着る：</strong>麻痺のある側の腕・足から先に通す</li>
+                        <li><strong>脱ぐときは逆：</strong>健側（動く側）から脱ぐ</li>
+                        <li><strong>着やすい服を選ぶ：</strong>前開き、ゆったりしたもの、伸縮性のある素材</li>
+                    </ul>
+                </div>
+
+                <div class="adl-tip">
+                    <h4>🛁 入浴</h4>
+                    <ul>
+                        <li><strong>シャワーチェアを使用：</strong>座って洗うことで転倒リスクを軽減</li>
+                        <li><strong>手すりにつかまる：</strong>浴槽の出入りは必ず手すりを使う</li>
+                        <li><strong>温度に注意：</strong>熱すぎるお湯は血圧変動の原因に（40℃以下推奨）</li>
+                        <li><strong>長湯を避ける：</strong>10〜15分程度に</li>
+                        <li><strong>一人での入浴は避ける：</strong>見守りを依頼する</li>
+                    </ul>
+                </div>
+
+                <div class="adl-tip">
+                    <h4>🚶 移動・歩行</h4>
+                    <ul>
+                        <li><strong>急がない：</strong>時間に余裕を持って行動する</li>
+                        <li><strong>杖や歩行器を使う：</strong>処方された補助具を必ず使用</li>
+                        <li><strong>両手を空ける：</strong>荷物はリュックやショルダーバッグに</li>
+                        <li><strong>靴を選ぶ：</strong>かかとが低く、滑りにくく、脱げにくいもの</li>
+                    </ul>
+                </div>
+
+                <div class="warning-card">
+                    <strong>⚠️ 夜間のトイレ</strong>
+                    <p style="margin-bottom: 0;">夜間は特に転倒リスクが高まります。足元灯を使い、急に立ち上がらず、必ず手すりやつかまるものを使いましょう。</p>
+                </div>
+            </div>
+
+            <!-- 便利な福祉用具 -->
+            <div class="tips-section">
+                <h2><span class="icon">🛠️</span>便利な福祉用具</h2>
+                <p>福祉用具を活用することで、日常生活がより安全・快適になります。介護保険を使えばレンタルや購入の補助が受けられるものもあります。</p>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="icon">🚿</div>
+                        <h4>シャワーチェア</h4>
+                        <p>座って洗える椅子。高さ調節可能なものも。</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="icon">🚽</div>
+                        <h4>トイレ補助フレーム</h4>
+                        <p>便座の両側につける手すり。立ち座りが楽に。</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="icon">🛏️</div>
+                        <h4>ベッド用手すり</h4>
+                        <p>起き上がりや立ち上がりをサポート。</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="icon">🦯</div>
+                        <h4>T字杖・4点杖</h4>
+                        <p>歩行をサポート。安定性が向上。</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="icon">👟</div>
+                        <h4>リハビリシューズ</h4>
+                        <p>脱ぎ履きしやすく、滑りにくい靴。</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="icon">🔦</div>
+                        <h4>センサーライト</h4>
+                        <p>人感センサーで自動点灯。夜間の安全に。</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>💡 ヒント：</strong>福祉用具は地域包括支援センターや担当のケアマネジャーに相談すると、適切なものを紹介してもらえます。
+                </p>
+            </div>
+
+            <!-- 外出時の注意 -->
+            <div class="tips-section">
+                <h2><span class="icon">🚗</span>外出時の注意</h2>
+                <ul>
+                    <li><strong>天気を確認：</strong>雨や雪の日は滑りやすいので注意。できれば避ける</li>
+                    <li><strong>時間に余裕を持つ：</strong>焦らずゆっくり行動</li>
+                    <li><strong>休憩場所を確認：</strong>外出先でのベンチや椅子の場所を把握</li>
+                    <li><strong>連絡手段を持つ：</strong>携帯電話を忘れずに</li>
+                    <li><strong>身分証明書を携帯：</strong>万が一の時のために</li>
+                    <li><strong>付き添いを依頼：</strong>不安な場合は誰かと一緒に</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 リハビリガイド All Rights Reserved.</p>
+                <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">
+                    ※ このサイトの情報は教育目的であり、医療アドバイスではありません。
+                    リハビリを始める前に必ず医師にご相談ください。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

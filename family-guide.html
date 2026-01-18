@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="リハビリ患者を支える家族のためのサポートガイド。介護のコツ、声かけ、セルフケアをエビデンスに基づいて解説。">
+    <title>家族向けサポートガイド | リハビリガイド</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .guide-section {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .guide-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .guide-section h2 .icon {
+            font-size: 2rem;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .tip-card h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-card {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .do-box {
+            background: #ECFDF5;
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .do-box h4 {
+            color: #059669;
+            margin-bottom: 0.75rem;
+        }
+
+        .dont-box {
+            background: #FEF2F2;
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .dont-box h4 {
+            color: #DC2626;
+            margin-bottom: 0.75rem;
+        }
+
+        .selfcare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .selfcare-item {
+            background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .selfcare-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .evidence-citation {
+            background: #F8FAFC;
+            border-left: 3px solid var(--color-secondary);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.875rem;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22C55E;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏃‍♂️</span>
+                <span>リハビリガイド</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="exercises.html">自主トレ</a></li>
+                <li><a href="research.html">論文解説</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
+                <li><a href="family-guide.html" class="active">家族向けガイド</a></li>
+                <li><a href="glossary.html">用語集</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);">
+        <div class="container">
+            <h1>👨‍👩‍👧 家族向けサポートガイド</h1>
+            <p>大切な人のリハビリを支えるご家族のために</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- イントロ -->
+            <div class="guide-section">
+                <h2><span class="icon">💜</span>ご家族の方へ</h2>
+                <p>リハビリ患者さんを支えるご家族の役割はとても大切です。しかし、介護は身体的にも精神的にも大きな負担を伴います。</p>
+                <p><strong>このガイドでは、エビデンスに基づいた効果的なサポート方法と、ご家族自身のケアについてご紹介します。</strong></p>
+
+                <div class="evidence-citation">
+                    <strong>📚 研究によると：</strong>家族を含めた介入プログラムは、介護者の負担・ストレスを軽減し、患者さんの機能回復にも良い影響を与えることが示されています。
+                    <br><small>出典: Stroke 2022 (DOI: 10.1161/STROKEAHA.121.034090)</small>
+                </div>
+            </div>
+
+            <!-- 効果的な声かけ -->
+            <div class="guide-section">
+                <h2><span class="icon">💬</span>効果的な声かけ・励まし方</h2>
+                <p>言葉の力は大きいです。適切な声かけはモチベーションを高め、不適切な言葉は意欲を損なうことがあります。</p>
+
+                <div class="do-dont">
+                    <div class="do-box">
+                        <h4>✅ おすすめの声かけ</h4>
+                        <ul>
+                            <li>「今日は〇〇ができたね！」（具体的に褒める）</li>
+                            <li>「前より少し動きがスムーズになったね」</li>
+                            <li>「一緒にやってみよう」</li>
+                            <li>「無理しなくていいよ、休憩しよう」</li>
+                            <li>「困ったらいつでも言ってね」</li>
+                        </ul>
+                    </div>
+                    <div class="dont-box">
+                        <h4>❌ 避けたい声かけ</h4>
+                        <ul>
+                            <li>「がんばって！」（過度なプレッシャー）</li>
+                            <li>「前はできたのに」（過去との比較）</li>
+                            <li>「なんでできないの」（責める言葉）</li>
+                            <li>「私がやるから」（過保護）</li>
+                            <li>「もっと早く」（急かす言葉）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <h4>💡 ポイント</h4>
+                    <p><strong>小さな進歩を認めて具体的に褒める</strong>ことが、自己効力感（自分でできるという自信）を高め、運動継続につながります。「できたこと」に焦点を当てましょう。</p>
+                </div>
+            </div>
+
+            <!-- 見守りと介助のバランス -->
+            <div class="guide-section">
+                <h2><span class="icon">👀</span>「見守る」と「手を出す」のバランス</h2>
+                <p>リハビリでは、<strong>「できることは自分でやる」</strong>ことが回復の鍵です。過度な介助は筋力や能力の低下につながることがあります。</p>
+
+                <div class="tip-card">
+                    <h4>🎯 基本姿勢：「やってあげる」から「見守る」へ</h4>
+                    <ul class="checklist">
+                        <li>まずは本人がやってみるのを待つ</li>
+                        <li>助けを求められたら手を貸す</li>
+                        <li>完璧でなくてもOK、時間がかかってもOK</li>
+                        <li>安全が確保できれば、失敗も学びの機会</li>
+                    </ul>
+                </div>
+
+                <div class="warning-card">
+                    <strong>⚠️ ただし安全第一</strong>
+                    <p style="margin-bottom: 0;">転倒リスクが高い動作（歩行、階段、入浴など）では、必ず見守りを行い、必要に応じて介助してください。</p>
+                </div>
+
+                <h3>介助のコツ</h3>
+                <div class="tip-card">
+                    <h4>🚶 歩行の見守り</h4>
+                    <ul>
+                        <li>患者さんの<strong>麻痺側やや後方</strong>に位置する</li>
+                        <li>腰ベルトやズボンのベルト部分を軽く持つ</li>
+                        <li>前から引っ張らない</li>
+                        <li>「ゆっくりでいいよ」と声をかける</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h4>🪑 立ち上がりの介助</h4>
+                    <ul>
+                        <li>まず本人に「立てる？」と確認</li>
+                        <li>必要なら肘下に手を添える</li>
+                        <li>引っ張り上げず、<strong>立つ動きに合わせてサポート</strong></li>
+                        <li>急がせない</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 介護者のセルフケア -->
+            <div class="guide-section">
+                <h2><span class="icon">🌸</span>介護者自身のセルフケア</h2>
+                <p><strong>介護者の健康も、患者さんの回復と同じくらい大切です。</strong>自分自身を大切にすることは、決して「わがまま」ではありません。</p>
+
+                <div class="warning-card">
+                    <strong>📊 介護者負担について</strong>
+                    <p style="margin-bottom: 0;">
+                        研究によると、脳卒中患者の介護者は高いレベルの負担を経験し、感情的な疲労感、身体的な疲労、メンタルヘルスへの影響が報告されています。早期からのセルフケアが重要です。</p>
+                </div>
+
+                <h3>🌿 セルフケアの方法</h3>
+                <div class="selfcare-grid">
+                    <div class="selfcare-item">
+                        <div class="icon">😴</div>
+                        <h4>十分な睡眠</h4>
+                        <p>睡眠不足は判断力低下や体調不良の原因に。7〜8時間の睡眠を心がけましょう。</p>
+                    </div>
+                    <div class="selfcare-item">
+                        <div class="icon">🚶‍♀️</div>
+                        <h4>自分の運動時間</h4>
+                        <p>週に数回、自分だけの運動時間を確保。散歩でもOK。ストレス解消になります。</p>
+                    </div>
+                    <div class="selfcare-item">
+                        <div class="icon">👥</div>
+                        <h4>人とつながる</h4>
+                        <p>孤立しないことが大切。友人、家族、介護者の会などでつながりを保ちましょう。</p>
+                    </div>
+                    <div class="selfcare-item">
+                        <div class="icon">☕</div>
+                        <h4>自分の時間</h4>
+                        <p>趣味や好きなことをする時間を確保。短時間でも気分転換になります。</p>
+                    </div>
+                    <div class="selfcare-item">
+                        <div class="icon">🆘</div>
+                        <h4>助けを求める</h4>
+                        <p>一人で抱え込まない。デイサービスやショートステイなどのサービスも活用を。</p>
+                    </div>
+                    <div class="selfcare-item">
+                        <div class="icon">📝</div>
+                        <h4>感情を表現する</h4>
+                        <p>辛い気持ちを溜め込まない。日記に書いたり、誰かに話したりすることが大切。</p>
+                    </div>
+                </div>
+
+                <div class="evidence-citation">
+                    <strong>📚 研究からのエビデンス：</strong>家族サポート介入（教育、ストレス管理、問題解決訓練を含む）は、介護者の負担とストレスを有意に軽減することが確認されています。
+                    <br><small>出典: Rev. Latino-Am. Enfermagem 2021 (DOI: 10.1590/1518-8345.4991.3482)</small>
+                </div>
+            </div>
+
+            <!-- 相談先 -->
+            <div class="guide-section">
+                <h2><span class="icon">🏥</span>困ったときの相談先</h2>
+                <ul>
+                    <li><strong>主治医・リハビリスタッフ：</strong>医療的な相談、リハビリの進め方</li>
+                    <li><strong>医療ソーシャルワーカー（MSW）：</strong>退院後の生活、サービス利用の相談</li>
+                    <li><strong>地域包括支援センター：</strong>介護保険、地域のサービス</li>
+                    <li><strong>介護者の会・患者会：</strong>同じ経験を持つ人との交流</li>
+                    <li><strong>こころの健康相談統一ダイヤル：</strong>0570-064-556（精神的に辛いとき）</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 リハビリガイド All Rights Reserved.</p>
+                <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">
+                    ※ このサイトの情報は教育目的であり、医療アドバイスではありません。
+                    リハビリを始める前に必ず医師にご相談ください。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

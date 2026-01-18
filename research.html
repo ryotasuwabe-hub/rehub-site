@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="リハビリに関する最新研究論文をわかりやすく解説。エビデンスに基づいた情報を提供。">
+    <title>論文解説 | リハビリガイド</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .citation {
+            background: #F8FAFC;
+            border-left: 3px solid var(--color-secondary);
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.875rem;
+        }
+
+        .citation-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .citation-authors {
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .citation-journal {
+            color: var(--color-secondary);
+            font-style: italic;
+        }
+
+        .citation-doi {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        .citation-doi a {
+            color: var(--color-secondary);
+        }
+
+        .key-finding {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: #ECFDF5;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-top: 0.75rem;
+        }
+
+        .key-finding-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .key-finding-text {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .evidence-level {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: #FEF3C7;
+            color: #92400E;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏃‍♂️</span>
+                <span>リハビリガイド</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="exercises.html">自主トレ</a></li>
+                <li><a href="research.html" class="active">論文解説</a></li>
+                <li><a href="faq.html">よくある質問</a></li>
+                <li><a href="family-guide.html">家族向けガイド</a></li>
+                <li><a href="glossary.html">用語集</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);">
+        <div class="container">
+            <h1>📚 論文解説</h1>
+            <p>最新のリハビリ研究をエビデンスに基づいて解説</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="stroke">脳卒中</button>
+                <button class="filter-btn" data-filter="fall">転倒予防</button>
+                <button class="filter-btn" data-filter="adherence">継続のコツ</button>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Article 1: Fall Prevention - Sherrington 2017 -->
+                <div class="card research-card fade-in" data-category="fall">
+                    <h3>高齢者の転倒予防：運動で転倒リスク21%減少
+                        <span class="evidence-level">⭐ 高エビデンス</span>
+                    </h3>
+                    <p>系統的レビューとメタ分析（88研究を統合）により、運動プログラムが地域在住高齢者の転倒率を<strong>21%減少</strong>させることが確認されました。週3時間以上のバランス訓練で<strong>39%減少</strong>。
+                    </p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">バランスを挑戦する運動と、週3時間以上の運動プログラムが最も効果的。パーキンソン病や認知障害のある方にも効果あり。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Exercise to prevent falls in older adults: an updated systematic
+                            review and meta-analysis</div>
+                        <div class="citation-authors">Sherrington C, Michaleff ZA, Fairhall N, et al.</div>
+                        <div class="citation-journal">British Journal of Sports Medicine 2017; 51(24): 1750-1758</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1136/bjsports-2016-096547"
+                                target="_blank">10.1136/bjsports-2016-096547</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">転倒予防</span>
+                        <span class="research-date">📅 BJSM 2017</span>
+                    </div>
+                </div>
+
+                <!-- Article 2: Stroke Late Physiotherapy -->
+                <div class="card research-card fade-in" data-category="stroke">
+                    <h3>慢性期脳卒中でも理学療法は効果的
+                        <span class="evidence-level">⭐ 高エビデンス</span>
+                    </h3>
+                    <p>15のRCTを統合したメタ分析により、慢性期（発症後6ヶ月以上）の脳卒中患者でも、積極的な理学療法介入が歩行速度と6分間歩行距離を有意に改善することが示されました。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span
+                            class="key-finding-text">「回復のプラトー」という概念に反し、発症後長期間経過しても機能改善は可能。歩行速度0.05m/s、歩行距離19.8m向上。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Efficacy of physiotherapy interventions late after stroke: a
+                            meta-analysis</div>
+                        <div class="citation-authors">Ferrarello F, Baccini M, Rinaldi LA, et al.</div>
+                        <div class="citation-journal">Journal of Neurology, Neurosurgery & Psychiatry 2011; 82(2):
+                            136-143</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1136/jnnp.2009.196428"
+                                target="_blank">10.1136/jnnp.2009.196428</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">脳卒中リハビリ</span>
+                        <span class="research-date">📅 JNNP 2011</span>
+                    </div>
+                </div>
+
+                <!-- Article 3: Behavior Change -->
+                <div class="card research-card fade-in" data-category="adherence">
+                    <h3>高齢者の運動継続：効果的な行動変容技法
+                        <span class="evidence-level">⭐ 中〜高エビデンス</span>
+                    </h3>
+                    <p>高齢者の運動継続を促進する介入方法を検討した系統的レビュー。フィードバックとモニタリングを含む行動変容技法が、運動アドヒアランス向上に有効であることが確認されました。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text"><strong>効果的な技法：</strong>①フィードバック ②セルフモニタリング（記録） ③目標設定
+                            ④社会的サポート。複数の技法を組み合わせると効果的。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">What interventions are used to improve exercise adherence in older
+                            people and what behavioural techniques are they based on? A systematic review</div>
+                        <div class="citation-authors">Room J, Hannink E, Dawes H, Barker K.</div>
+                        <div class="citation-journal">BMJ Open 2017; 7(12): e019221</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1136/bmjopen-2017-019221"
+                                target="_blank">10.1136/bmjopen-2017-019221</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">行動科学</span>
+                        <span class="research-date">📅 BMJ Open 2017</span>
+                    </div>
+                </div>
+
+                <!-- Article 4: Backward Walking Stroke -->
+                <div class="card research-card fade-in" data-category="stroke">
+                    <h3>後ろ歩き訓練で脳卒中後の歩行能力が向上
+                        <span class="evidence-level">⭐ 中エビデンス</span>
+                    </h3>
+                    <p>脳卒中患者を対象としたメタ分析により、後ろ歩き訓練（Backward Walking
+                        Training）が、10m歩行テスト、ケイデンス、バーグバランススケール、歩幅を有意に改善することが示されました。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">後ろ歩きは通常の前進歩行と異なる筋活動パターンを使うため、歩行機能の多様な改善につながる可能性。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Backward Walking Training Impacts Positive Effect on Improving
+                            Walking Capacity after Stroke: A Meta-Analysis</div>
+                        <div class="citation-authors">Wang J, Xu J, An R.</div>
+                        <div class="citation-journal">International Journal of Environmental Research and Public Health
+                            2022; 19(6): 3370</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.3390/ijerph19063370"
+                                target="_blank">10.3390/ijerph19063370</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">脳卒中リハビリ</span>
+                        <span class="research-date">📅 IJERPH 2022</span>
+                    </div>
+                </div>
+
+                <!-- Article 5: Exercise Adherence Musculoskeletal -->
+                <div class="card research-card fade-in" data-category="adherence">
+                    <h3>関節炎・腰痛患者の運動継続を促す介入
+                        <span class="evidence-level">⭐ 中エビデンス</span>
+                    </h3>
+                    <p>慢性筋骨格系疼痛患者（腰痛・変形性関節症）を対象とした系統的レビューとメタ分析。構造化された動機付け戦略が単純な励ましより効果的であることが示されました。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">目標設定、個別化されたフィードバック、スキル開発が効果的。慢性疾患を持つ人には、より構造化されたアプローチが必要。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Interventions to increase adherence to therapeutic exercise in older
+                            adults with low back pain and/or hip/knee osteoarthritis: a systematic review and
+                            meta-analysis</div>
+                        <div class="citation-authors">Nicolson PJA, Bennell KL, Dobson FL, et al.</div>
+                        <div class="citation-journal">British Journal of Sports Medicine 2017; 51(10): 791-799</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1136/bjsports-2016-096458"
+                                target="_blank">10.1136/bjsports-2016-096458</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">行動科学</span>
+                        <span class="research-date">📅 BJSM 2017</span>
+                    </div>
+                </div>
+
+                <!-- Article 6: Tai Chi -->
+                <div class="card research-card fade-in" data-category="fall">
+                    <h3>太極拳・3次元運動で転倒予防効果
+                        <span class="evidence-level">⭐ 中エビデンス</span>
+                    </h3>
+                    <p>32のRCTを分析したメタ分析により、太極拳などの3次元運動が高齢者の転倒予防に最も効果的であることが示されました。筋力運動と複合運動も有効。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">ゆっくりとした動きで安全に実施可能。グループで行うことで社会的なつながりも得られ、継続しやすい。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">The Effectiveness of Physical Exercise on Balance and the Prevention
+                            of Falls in Older Adults: A Systematic Review and Meta-Analysis</div>
+                        <div class="citation-authors">Sherrington C, Fairhall N, Wallbank GK, et al.</div>
+                        <div class="citation-journal">Cochrane Database of Systematic Reviews 2019, Issue 1. Art. No.:
+                            CD012424</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1002/14651858.CD012424.pub2"
+                                target="_blank">10.1002/14651858.CD012424.pub2</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">転倒予防</span>
+                        <span class="research-date">📅 Cochrane 2019</span>
+                    </div>
+                </div>
+
+                <!-- Article 7: Real-world Walking Stroke -->
+                <div class="card research-card fade-in" data-category="stroke">
+                    <h3>脳卒中後の実生活での歩行改善
+                        <span class="evidence-level">⭐ 中エビデンス</span>
+                    </h3>
+                    <p>脳卒中後の実生活での歩行習慣を改善する介入を検討した系統的レビューとメタ分析。行動変容技法を組み込んだ介入が、運動のみの介入より効果的。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">運動のみでも1日の歩数が小〜中程度改善。歩行速度・持久力も改善。行動変容を組み合わせるとより効果的。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Interventions to improve real-world walking after stroke: a
+                            systematic review and meta-analysis</div>
+                        <div class="citation-authors">Stretton CM, Mudge S, Kayes NM, McPherson KM.</div>
+                        <div class="citation-journal">Clinical Rehabilitation 2017; 31(3): 310-318</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1177/0269215516640863"
+                                target="_blank">10.1177/0269215516640863</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">脳卒中リハビリ</span>
+                        <span class="research-date">📅 Clinical Rehabil 2017</span>
+                    </div>
+                </div>
+
+                <!-- Article 8: Self-efficacy -->
+                <div class="card research-card fade-in" data-category="adherence">
+                    <h3>自己効力感を高めると運動が続く
+                        <span class="evidence-level">⭐ 中エビデンス</span>
+                    </h3>
+                    <p>高齢者の身体活動と自己効力感の関係を検討した系統的レビュー。行動プログラムが自己効力感と運動継続率の両方を向上させることが示されました。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">自己効力感（自分でできるという自信）は運動継続の強力な予測因子。小さな成功体験を積み重ねることが重要。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Exercise and older adults: changing behavior with the
+                            transtheoretical model</div>
+                        <div class="citation-authors">Burbank PM, Reibe D, Padula CA, Nigg C.</div>
+                        <div class="citation-journal">Orthopaedic Nursing 2002; 21(4): 51-63</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1097/00006416-200207000-00009"
+                                target="_blank">10.1097/00006416-200207000-00009</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">行動科学</span>
+                        <span class="research-date">📅 Orthop Nurs 2002</span>
+                    </div>
+                </div>
+
+                <!-- Article 9: Home Exercise Adherence -->
+                <div class="card research-card fade-in" data-category="adherence">
+                    <h3>自宅運動プログラムの継続：Cochraneレビュー
+                        <span class="evidence-level">⭐ 高エビデンス</span>
+                    </h3>
+                    <p>慢性筋骨格系疼痛患者の運動継続を促進する介入を検討したCochrane系統的レビュー。監督下での運動、個別化されたプログラム、ブースターセッションが効果的。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">グループ運動や定期的なフォローアップが継続を促進。認知行動療法的アプローチとの併用も有効。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Interventions to improve adherence to exercise for chronic
+                            musculoskeletal pain in adults</div>
+                        <div class="citation-authors">Jordan JL, Holden MA, Mason EE, Foster NE.</div>
+                        <div class="citation-journal">Cochrane Database of Systematic Reviews 2010, Issue 1. Art. No.:
+                            CD005956</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1002/14651858.CD005956.pub2"
+                                target="_blank">10.1002/14651858.CD005956.pub2</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">行動科学</span>
+                        <span class="research-date">📅 Cochrane 2010</span>
+                    </div>
+                </div>
+
+                <!-- Article 10: Stroke Physical Activity -->
+                <div class="card research-card fade-in" data-category="stroke">
+                    <h3>脳卒中後の身体活動増加：最新メタ分析
+                        <span class="evidence-level">⭐ 高エビデンス</span>
+                    </h3>
+                    <p>地域在住の脳卒中生存者を対象とした最新のメタ分析。積極的な理学療法が身体活動レベルに小さいが有意な効果を示すことが確認されました。</p>
+
+                    <div class="key-finding">
+                        <span class="key-finding-icon">💡</span>
+                        <span class="key-finding-text">効果サイズは0.29。継続的な介入と生活習慣への統合が重要。脳卒中後も活動的な生活は可能。</span>
+                    </div>
+
+                    <div class="citation">
+                        <div class="citation-title">Impact of Active Physiotherapy on Physical Activity Level in Stroke
+                            Survivors: A Systematic Review and Meta-Analysis</div>
+                        <div class="citation-authors">English C, Healy GN, Coates A, et al.</div>
+                        <div class="citation-journal">Stroke 2024; 55(1): 195-204</div>
+                        <div class="citation-doi">DOI: <a href="https://doi.org/10.1161/STROKEAHA.123.044199"
+                                target="_blank">10.1161/STROKEAHA.123.044199</a></div>
+                    </div>
+
+                    <div class="research-meta">
+                        <span class="research-category">脳卒中リハビリ</span>
+                        <span class="research-date">📅 Stroke 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ガイド</span>
+                <h2>エビデンスレベルの読み方</h2>
+                <p>研究の信頼性を理解するために</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card feature-card">
+                    <div class="card-icon">⭐</div>
+                    <h3>高エビデンス</h3>
+                    <p>複数のランダム化比較試験（RCT）のメタ分析やCochrane系統的レビューに基づく。最も信頼性の高い証拠です。</p>
+                </div>
+                <div class="card feature-card">
+                    <div class="card-icon">📊</div>
+                    <h3>中エビデンス</h3>
+                    <p>単一または少数のRCT、あるいは質の高いコホート研究に基づく。信頼できるが、さらなる研究が望まれます。</p>
+                </div>
+                <div class="card feature-card">
+                    <div class="card-icon">📝</div>
+                    <h3>引用の確認方法</h3>
+                    <p>各記事のDOIリンクから原著論文にアクセスできます。PubMedやGoogle Scholarでも検索可能です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 リハビリガイド All Rights Reserved.</p>
+                <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">
+                    ※ このサイトの情報は教育目的であり、医療アドバイスではありません。
+                    リハビリを始める前に必ず医師にご相談ください。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
