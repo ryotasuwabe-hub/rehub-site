@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="リハビリに関するよくある質問と、エビデンスに基づいた回答をご紹介。患者さん・ご家族向け。">
+    <title>よくある質問 | リハビリガイド</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #BAE6FD 0%, #E0F2FE 100%);
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .faq-question .icon {
+            font-size: 1.5rem;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+
+        .faq-content {
+            padding: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .evidence-box {
+            background: #F0FDF4;
+            border-left: 4px solid #22C55E;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .evidence-box strong {
+            color: #166534;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🏃‍♂️</span>
+                <span>リハビリガイド</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="exercises.html">自主トレ</a></li>
+                <li><a href="research.html">論文解説</a></li>
+                <li><a href="faq.html" class="active">よくある質問</a></li>
+                <li><a href="family-guide.html">家族向けガイド</a></li>
+                <li><a href="glossary.html">用語集</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);">
+        <div class="container">
+            <h1>❓ よくある質問</h1>
+            <p>リハビリに関する疑問にエビデンスに基づいてお答えします</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <!-- リハビリの基本 -->
+            <span class="category-badge">🔰 リハビリの基本</span>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">⏰</span>リハビリはいつから始めるのがいいですか？</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p>できるだけ<strong>早期に開始する</strong>ことが推奨されています。特に脳卒中の場合、発症後24〜48時間以内に離床を開始することで、機能回復が促進される可能性があります。
+                        </p>
+                        <p>ただし、病状や全身状態によって最適な開始時期は異なりますので、<strong>必ず主治医やリハビリスタッフと相談</strong>してください。</p>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>早期リハビリテーション開始により、入院期間の短縮と機能的自立度の改善が期待できることが複数の研究で示されています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">📅</span>週に何回、どれくらいの時間運動すればいいですか？</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p>転倒予防やリハビリ効果を得るためには、<strong>週3回以上</strong>、<strong>1回30分以上</strong>の運動が推奨されています。</p>
+                        <p>特に効果が高いのは：</p>
+                        <ul>
+                            <li>バランスを challenging する運動</li>
+                            <li>週3時間以上の運動プログラム（転倒リスク39%減少）</li>
+                            <li>筋力トレーニングとバランス訓練の組み合わせ</li>
+                        </ul>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>Sherrington et al., BJSM 2017（DOI:
+                            10.1136/bjsports-2016-096547）の系統的レビューで、週3時間以上のバランス訓練で転倒リスクが39%減少することが示されています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">📈</span>効果が出るまでどれくらいかかりますか？</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p>一般的に、<strong>8〜12週間</strong>継続することで効果を実感できることが多いです。</p>
+                        <p>ただし、回復には個人差があり、以下の要因が影響します：</p>
+                        <ul>
+                            <li>疾患の種類と重症度</li>
+                            <li>運動の頻度と強度</li>
+                            <li>全身状態と合併症</li>
+                            <li>モチベーションと継続性</li>
+                        </ul>
+                        <p><strong>「回復のプラトー」という考え方は見直されています。</strong>慢性期（発症後6ヶ月以上）でも、適切な介入により機能改善は可能です。</p>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>Ferrarello et al., JNNP 2011（DOI:
+                            10.1136/jnnp.2009.196428）のメタ分析で、慢性期脳卒中患者でも理学療法により歩行能力が改善することが確認されています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 運動時の注意 -->
+            <span class="category-badge" style="margin-top: 2rem;">⚠️ 運動時の注意</span>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">😣</span>痛みがあるときは運動していいですか？</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p><strong>軽度の痛み（0-3/10程度）</strong>であれば、運動を継続しても問題ないことが多いです。</p>
+                        <p>ただし、以下の場合は<strong>運動を中止</strong>し、専門家に相談してください：</p>
+                        <ul>
+                            <li>運動中に痛みが悪化する</li>
+                            <li>運動後24時間以上痛みが続く</li>
+                            <li>急に発症した強い痛み</li>
+                            <li>発熱や腫れを伴う痛み</li>
+                        </ul>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>慢性痛に対する運動療法は、適切な負荷で行えば痛みを悪化させず、むしろ長期的には痛みの軽減につながることが研究で示されています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">😰</span>転倒が怖くて運動できません</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p>転倒への恐怖（Fear of
+                            Falling）は多くの高齢者が経験する自然な感情です。しかし、<strong>運動を避けることで筋力やバランスが低下</strong>し、かえって転倒リスクが高まる悪循環に陥ることがあります。
+                        </p>
+                        <p><strong>安全に運動を始めるコツ：</strong></p>
+                        <ul>
+                            <li>椅子や手すりにつかまって行う</li>
+                            <li>簡単な運動から段階的に進める</li>
+                            <li>誰かに見守ってもらう</li>
+                            <li>滑りにくい靴を履く</li>
+                        </ul>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>バランス訓練と運動プログラムは転倒リスクを21〜39%減少させることが確認されています。運動することで転倒リスクは下がります。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 家族のサポート -->
+            <span class="category-badge" style="margin-top: 2rem;">👨‍👩‍👧 家族のサポート</span>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">🤝</span>家族ができるサポートは何ですか？</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p>家族のサポートはリハビリの成功に大きく影響します。<strong>効果的なサポート方法：</strong></p>
+                        <ul>
+                            <li><strong>励ましと応援：</strong>小さな進歩を認めて褒める</li>
+                            <li><strong>環境整備：</strong>安全に運動できる場所を確保</li>
+                            <li><strong>見守り：</strong>必要なときだけ手を貸す（過剰な介助は避ける）</li>
+                            <li><strong>記録の手伝い：</strong>運動の記録をつける</li>
+                            <li><strong>一緒に運動：</strong>家族も一緒に体を動かす</li>
+                        </ul>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>家族を含めた介入プログラムは、介護者の負担軽減と患者の機能回復の両方に効果があることが示されています（Stroke 2022,
+                            DOI: 10.1161/STROKEAHA.121.034090）。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">💪</span>リハビリを続けるコツを教えてください</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p>科学的に効果が確認されている<strong>運動継続のコツ：</strong></p>
+                        <ol>
+                            <li><strong>目標設定：</strong>具体的で達成可能な目標を立てる</li>
+                            <li><strong>記録をつける：</strong>運動日記やアプリで進捗を可視化</li>
+                            <li><strong>フィードバック：</strong>定期的に成果を確認する</li>
+                            <li><strong>社会的サポート：</strong>家族や仲間と一緒に取り組む</li>
+                            <li><strong>段階的な課題設定：</strong>少しずつ難易度を上げる</li>
+                        </ol>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>Room et al., BMJ Open 2017（DOI:
+                            10.1136/bmjopen-2017-019221）の系統的レビューで、これらの行動変容技法が高齢者の運動継続に有効であることが確認されています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 退院後の生活 -->
+            <span class="category-badge" style="margin-top: 2rem;">🏠 退院後の生活</span>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><span class="icon">🏠</span>自宅で安全に運動するにはどうすればいいですか？</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-content">
+                        <p><strong>自宅での安全な運動環境づくり：</strong></p>
+                        <ul>
+                            <li>滑りやすいマットや敷物を除去または固定</li>
+                            <li>電気コードや障害物を通路から除去</li>
+                            <li>十分な明るさを確保（特に夜間）</li>
+                            <li>手すりやつかまるものがある場所で運動</li>
+                            <li>滑りにくい靴や靴下を着用</li>
+                        </ul>
+                        <div class="evidence-box">
+                            <strong>📚 エビデンス：</strong>Cochrane系統的レビューにより、住宅環境の改善が転倒リスクを26%減少させることが示されています。ハイリスク者では38%減少。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">💡</span>
+                <h2>もっと詳しく知りたい方へ</h2>
+                <p>各テーマの詳細ガイドをご覧ください</p>
+            </div>
+            <div class="cards-grid">
+                <a href="family-guide.html" class="card feature-card" style="text-decoration: none;">
+                    <div class="card-icon">👨‍👩‍👧</div>
+                    <h3>家族向けサポートガイド</h3>
+                    <p>介護者の方に向けた具体的なアドバイスと、ご自身のケア方法をご紹介。</p>
+                </a>
+                <a href="daily-tips.html" class="card feature-card" style="text-decoration: none;">
+                    <div class="card-icon">🏠</div>
+                    <h3>日常生活のヒント</h3>
+                    <p>転倒予防の環境整備から日常動作の工夫まで、実践的なアドバイス。</p>
+                </a>
+                <a href="glossary.html" class="card feature-card" style="text-decoration: none;">
+                    <div class="card-icon">📖</div>
+                    <h3>用語集</h3>
+                    <p>リハビリでよく使われる専門用語をわかりやすく解説。</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 リハビリガイド All Rights Reserved.</p>
+                <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">
+                    ※ このサイトの情報は教育目的であり、医療アドバイスではありません。
+                    リハビリを始める前に必ず医師にご相談ください。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't already open
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
